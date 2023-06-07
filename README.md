@@ -1,4 +1,9 @@
 # firstapp
+ครั้งแรกกับการเรียน Flutter เรียนเมื่อเดือนมีนาคม 
+- ทำแค่หน้าux/ui ยังไม่ได้เขียน navigator 
+- ขอให้เป็นการเริ่มต้นที่ดี 
+- Take you time .
+- ให้เป็น V.1 ละกัน 
 
 A new Flutter project.
 
