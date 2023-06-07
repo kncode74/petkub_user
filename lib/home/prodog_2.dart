@@ -11,10 +11,10 @@ class SecoundTab extends StatelessWidget {
       body: GridView.builder(
         itemCount: 7,
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsets.all(2.0),
+            padding: const EdgeInsets.all(2.0),
             child: Container(
               color: Colors.grey,
             ),

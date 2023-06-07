@@ -1,18 +1,18 @@
+import 'package:firstapp/home/edit_profile.dart';
 import 'package:firstapp/home/pro_dogs.dart';
 import 'package:firstapp/home/profile_user.dart';
+
 import 'package:firstapp/home/scan.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
-class homePage extends StatefulWidget {
-  const homePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<homePage> createState() => _homePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _homePageState extends State<homePage> {
+class _HomePageState extends State<HomePage> {
   int _selectIndex = 0;
   void _navigateBottomNavibar(int index) {
     setState(() {
@@ -20,7 +20,7 @@ class _homePageState extends State<homePage> {
     });
   }
 
-  final List<Widget> _children = [Scanner(), MainDog()];
+  final List<Widget> _children = [const Scanner(), const Mainapp()];
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class _homePageState extends State<homePage> {
         currentIndex: _selectIndex,
         onTap: _navigateBottomNavibar,
         type: BottomNavigationBarType.fixed,
-        items: [
+        items: const [
           BottomNavigationBarItem(
               icon: Image(
                 image: AssetImage('images/6927609.png'),

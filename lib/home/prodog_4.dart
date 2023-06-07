@@ -22,7 +22,7 @@ class FourTab extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
+                SizedBox(
                   width: 141,
                   height: 180,
                   child: Column(
@@ -32,8 +32,9 @@ class FourTab extends StatelessWidget {
                         height: 132,
                       ),
                       Container(
-                        padding: EdgeInsets.only(left: 60, right: 50, top: 40),
-                        decoration: BoxDecoration(
+                        padding:
+                            const EdgeInsets.only(left: 60, right: 50, top: 40),
+                        decoration: const BoxDecoration(
                           color: Color.fromRGBO(217, 217, 217, 1),
                           borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(10),
@@ -55,8 +56,9 @@ class FourTab extends StatelessWidget {
                         height: 132,
                       ),
                       Container(
-                        padding: EdgeInsets.only(left: 60, right: 50, top: 40),
-                        decoration: BoxDecoration(
+                        padding:
+                            const EdgeInsets.only(left: 60, right: 50, top: 40),
+                        decoration: const BoxDecoration(
                           color: Color.fromRGBO(217, 217, 217, 1),
                           borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(10),
@@ -75,11 +77,17 @@ class FourTab extends StatelessWidget {
   }
 
   Widget bookParent() => Container(
-        margin: EdgeInsets.only(left: 60, right: 60, top: 10),
-        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        margin: const EdgeInsets.only(left: 60, right: 60, top: 10),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         decoration: BoxDecoration(
-          color: Color.fromRGBO(250, 160, 131, 3),
-        ),
+            color: const Color.fromRGBO(250, 160, 131, 3),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.grey.shade400,
+                  offset: const Offset(2.0, 2.0),
+                  blurRadius: 2.0,
+                  spreadRadius: 1.0),
+            ]),
         child: Column(
           children: [
             Row(
@@ -91,7 +99,7 @@ class FourTab extends StatelessWidget {
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       'ใบเพดดีกรีพันธุกรรม',
                       style:

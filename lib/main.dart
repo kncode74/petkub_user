@@ -1,11 +1,13 @@
-import 'package:firstapp/gallery_page.dart';
-import 'package:firstapp/home/first_app.dart';
+/*import 'package:firstapp/gallery_page.dart';
+import 'package:firstapp/home/edit_profile.dart';
+import 'package:firstapp/home/first_app.dart';*/
+
 import 'package:firstapp/home/homepage.dart';
-import 'package:firstapp/home/pro_dogs.dart';
+import 'package:firstapp/home/profile_user.dart';
+/*import 'package:firstapp/home/pro_dogs.dart';
 import 'package:firstapp/home/profile_user.dart';
 import 'package:firstapp/home/signin.dart';
-import 'package:firstapp/home/p.dart';
-import 'package:firstapp/home/prodog_1.dart';
+import 'package:firstapp/home/prodog_1.dart';*/
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,6 +25,6 @@ class App extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: homePage());
+        home: const HomePage());
   }
 }

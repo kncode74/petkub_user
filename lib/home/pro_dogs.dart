@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+
 import 'package:firstapp/home/prodog_1.dart';
 import 'package:firstapp/home/prodog_2.dart';
 import 'package:firstapp/home/prodog_3.dart';
@@ -20,8 +18,6 @@ class _MainDogState extends State<MainDog> {
 
   @override
   Widget build(BuildContext context) {
-    final left = profileHeight / 3;
-
     return DefaultTabController(
       length: 4,
       child: Scaffold(
@@ -31,8 +27,8 @@ class _MainDogState extends State<MainDog> {
             children: [
               buidTop(),
               Container(
-                margin: EdgeInsets.only(left: 30, top: 5),
-                child: Column(
+                margin: const EdgeInsets.only(left: 30, top: 10),
+                child: const Column(
                   children: [
                     Row(
                       children: [
@@ -47,13 +43,16 @@ class _MainDogState extends State<MainDog> {
                         ),
                       ],
                     ),
+                    SizedBox(
+                      height: 3,
+                    ),
                     Row(
                       children: [
                         Text(
                           '@63022889',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 16,
+                            fontSize: 15,
                             fontWeight: FontWeight.normal,
                             letterSpacing: 2,
                           ),
@@ -63,10 +62,10 @@ class _MainDogState extends State<MainDog> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 20,
+              const SizedBox(
+                height: 10,
               ),
-              TabBar(
+              const TabBar(
                 indicatorColor: Color.fromRGBO(159, 203, 114, 1),
                 tabs: [
                   Tab(
@@ -107,7 +106,12 @@ class _MainDogState extends State<MainDog> {
               ),
               Expanded(
                   child: TabBarView(
-                children: [FirstTab(), SecoundTab(), ThirdTab(), FourTab()],
+                children: [
+                  FirstTab(),
+                  const SecoundTab(),
+                  const ThirdTab(),
+                  const FourTab()
+                ],
               ))
             ],
           ),
@@ -117,7 +121,7 @@ class _MainDogState extends State<MainDog> {
   }
 
   Widget buidTop() {
-    final bottom = profileHeight / 2;
+    final bottom = profileHeight / 1.9;
     final top = coverHeight - profileHeight / 3;
     final left = coverHeight - profileHeight / 1;
 
@@ -150,13 +154,15 @@ class _MainDogState extends State<MainDog> {
         ),
       );
 
-  Widget buildDogImages() => CircleAvatar(
-        radius: profileHeight / 2.5,
-        backgroundColor: Colors.grey.shade800,
+  Widget buildDogImages() => const CircleAvatar(
+      radius: 53,
+      backgroundColor: Colors.white,
+      child: CircleAvatar(
+        radius: 50,
         backgroundImage: NetworkImage(
           'https://heropomthailand.com/wp-content/uploads/2023/02/IMG_3677-scaled.jpg',
         ),
-      );
+      ));
 
   Widget love() => Container(
         child: Image.asset(
